@@ -1,0 +1,30 @@
+#Starting  a Docker compose with file 
+
+Sudo docker compose -f docker-compose-project.yml up
+
+
+
+#Checking  the Images present in the system 
+sudo docker image ls
+
+incremental_training-master_mlflow    latest              64be8509afbf        8 hours ago         1.21GB
+incremental_training-master_airflow   latest              6186aba06062        8 hours ago         1.8GB
+postgres                              9.6                 6c8b19735285        38 hours ago        200MB
+composetest_web                       latest              00b799d3561d        2 weeks ago         220MB
+wurstmeister/kafka                    latest              55d8b709494e        2 weeks ago         432MB
+redis                                 alpine              d8415a415147        2 weeks ago         30.4MB
+python                                3.7-alpine          13f1d829523b        3 weeks ago         96.4MB
+puckel/docker-airflow                 latest              ce92b0f4d1d5        7 weeks ago         797MB
+wurstmeister/zookeeper                latest              3f43f72cb283        14 months ago       510MB
+
+#Location of the Image 
+ sudo ls -ltr  /var/lib/docker/image/overlay2/imagedb/content/sha256/
+ All files with Image code
+ 
+ # what kind of enviroment the image file contains 
+ "Env":
+ 
+ #ring everything down, removing the containers entirely, 
+ sudo docker-compose -f docker-compose-project.yml down --volumes
+ 
+ 
